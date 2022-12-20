@@ -1,0 +1,18 @@
+import dis
+g = 1
+def var4(c):
+    return c * (((749 - g) & g) ^ (c & g))
+print(dis.dis(var4))
+
+0 LOAD_FAST 0 (c) - загрузка переменной в стек
+2 LOAD_CONST 1 (749) - загрузка константы в стек
+4 LOAD_GLOBAL 0 (g) - загрузка переменной в стек
+6 BINARY_SUBTRACT - вычитание инструкции 4 из 2
+8 LOAD_GLOBAL 0 (g) - загрузка переменной в стек
+10 BINARY_AND - побитовое "и"
+12 LOAD_FAST 0 (c) - загрузка переменной в стек
+14 LOAD_GLOBAL 0 (g) - загрузка переменной в стек
+16 BINARY_AND - побитовое "и"
+18 BINARY_XOR - побитовое "исключающее или"
+20 BINARY_MULTIPLY - перемножение инструкции 18 с 0
+22 RETURN_VALUE - возврат значения

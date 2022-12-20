@@ -1,0 +1,13 @@
+import dis
+c = 1
+e = 1
+def var1(n):
+    return 1665 + (c | e)
+print(dis.dis(var1))
+
+0 LOAD_CONST 1 (1665) - загрузка постоянной в стек
+2 LOAD_GLOBAL 0 (c) - загрузка переменной в стек
+4 LOAD_GLOBAL 1 (e) - загрузка переменной в стек
+6 BINARY_OR - побитовое "или"
+8 BINARY_ADD - сложение инструкций 0 и 6
+10 RETURN_VALUE - возврат значения

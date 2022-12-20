@@ -1,0 +1,5 @@
+import dis
+
+def var10(e, c, b):
+    return ((901 ^ e) ^ e) ^ ((c | b) | b)
+print(dis.dis(var10))

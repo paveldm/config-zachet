@@ -1,0 +1,19 @@
+import dis
+f = 1
+a = 1
+def var7(h):
+    return f / (((f - a) + (99 | f)) / h)
+print(dis.dis(var7))
+
+0 LOAD_GLOBAL 0 (f) - загрузка переменной в стек
+2 LOAD_GLOBAL 0 (f) - загрузка переменной в стек
+4 LOAD_GLOBAL 0 (a) - загрузка переменной в стек
+6 BINARY_SUBTRACT - вычитание инструкции 4 из 2
+8 LOAD_CONST 1 (99) - загрузка константы в стек
+10 LOAD_GLOBAL 0 (f) - загрузка переменной в стек
+12 BINARY_OR - побитовое "или"
+14 BINARY_ADD - сложение инструкций 6 и 12
+16 LOAD_FAST 0 (h) - загрузка константы в стек
+18 BINARY_TRUE_DIVIDE - деление инструкции 14 на 16
+20 BINARY_TRUE_DIVIDE - деление инструкции 0 на 18
+22 RETURN_VALUE - возврат значения
